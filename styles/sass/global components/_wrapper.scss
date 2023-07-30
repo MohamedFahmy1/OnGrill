@@ -1,0 +1,20 @@
+@use "../helpers/" as *;
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 2px;
+  margin-block: 40px 25px;
+  & .separator {
+    width: 8px;
+    height: 8px;
+    border: 1px solid $main-color;
+    transform: rotate(45deg);
+    animation: rotate360 15s linear infinite;
+  }
+  @include keyframe(rotate360) {
+    to {
+      transform: rotate(1turn);
+    }
+  }
+}

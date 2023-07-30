@@ -1,0 +1,121 @@
+@use "../helpers/" as *;
+
+.about {
+  background-color: $gray-color;
+  padding: 200px 0 170px;
+  & .shape8 {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    @media (max-width: 1300px) {
+      display: none;
+    }
+  }
+  & .container {
+    display: grid;
+    grid-template-columns: 0.7fr 1fr;
+    gap: 30px;
+    @include average-screen {
+      grid-template-columns: 1fr;
+      gap: 66px;
+    }
+    & .left {
+      text-align: center;
+      color: white;
+      & > p:not(.tel) {
+        line-height: 1.8;
+        margin: 20px auto;
+        max-width: 420px;
+      }
+      & span {
+        font-weight: 700;
+      }
+      & .tel {
+        color: $main-color;
+        font-size: 24px;
+        position: relative;
+        width: fit-content;
+        padding: 10px;
+        margin: 0 auto;
+        @include hoverEffect;
+      }
+      & .btn {
+        margin: 20px auto;
+        padding: 20px 45px;
+        cursor: pointer;
+      }
+    }
+    & .right {
+      position: relative;
+      margin: 0;
+      &::after {
+        position: absolute;
+        content: "";
+        top: -72px;
+        right: -2px;
+        width: 135px;
+        height: 135px;
+        background-image: url(/rotatingImage2.png);
+        background-size: cover;
+        z-index: 2;
+        transform: rotate(0turn);
+        animation: rotateInfinite 15s infinite linear;
+        @include keyframe(rotateInfinite) {
+          from {
+            transform: rotate(-1turn);
+          }
+        }
+      }
+
+      & .rotatingImage {
+        position: absolute;
+        right: 0;
+        top: -36px;
+        z-index: 1;
+      }
+      & .about1 {
+        width: 100%;
+        @include average-screen {
+          height: auto;
+          object-fit: cover;
+        }
+
+        padding-left: 90px;
+      }
+      & .sideImage {
+        position: absolute;
+        bottom: -75px;
+        z-index: 2;
+        transition: all 0.7s;
+        width: fit-content;
+        & img {
+          @include mobile {
+            width: 167px;
+            height: auto;
+            object-fit: cover;
+          }
+        }
+        &::before {
+          position: absolute;
+          content: "";
+          top: -27px;
+          left: 50%;
+          transform: translate(-50%);
+          width: 140px;
+          height: 120%;
+          background-image: url(/menuPattern.svg);
+          background-position: center;
+          background-size: cover;
+          background-repeat: repeat;
+          transition: all 0.7s;
+          z-index: -1;
+          will-change: transform;
+          @include mobile {
+            width: 75px;
+            height: 130%;
+          }
+        }
+      }
+    }
+  }
+}

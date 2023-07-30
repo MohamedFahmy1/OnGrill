@@ -1,0 +1,168 @@
+@use "../helpers/" as *;
+.landing {
+  height: 100vh;
+  background-size: cover;
+  transition: 0.3s;
+  position: relative;
+  animation: slide 30s infinite linear;
+  background-image: url(/public/landing1.jpg);
+  background-position: center;
+  overflow: hidden;
+  @include average-screen {
+    animation: slideWithoutZoom 30s infinite linear;
+  }
+  & .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 200px;
+    text-align: center;
+    & .heading {
+      animation: slide-up 1.5s forwards;
+      transform: translateY(100%);
+      opacity: 0;
+      overflow: hidden;
+    }
+    & h1 {
+      font-size: 99px;
+      font-family: $special-font;
+      font-weight: 500;
+      color: white;
+      padding: 20px;
+      transform: translateY(50%);
+      opacity: 0;
+      overflow: hidden;
+      animation: slide-up 1.5s 1.5s forwards;
+      @include mobile {
+        font-size: 50px;
+      }
+    }
+    & > p {
+      color: white;
+      transform: translateY(100%);
+      opacity: 0;
+      overflow: hidden;
+      font-size: 20px;
+      animation: slide-up 1.5s 3s forwards;
+      @include mobile {
+        font-size: 14px;
+      }
+    }
+    & a {
+      margin-top: 40px;
+      letter-spacing: 2px;
+      padding: 20px 45px;
+      transform: translateY(100%);
+      opacity: 0;
+      overflow: hidden;
+      animation: slide-up 1.5s 4s forwards;
+    }
+    @include keyframe(slide-up) {
+      0% {
+        transform: translateY(30px);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+    @include keyframe(slide) {
+      0% {
+        background-image: url(/landing1.jpg);
+        background-size: 100% 100%;
+      }
+      27% {
+        background-image: url(/landing1.jpg);
+        background-size: 110% 110%;
+      }
+      33% {
+        background-image: url(/landing2.jpg);
+        background-size: 110% 110%;
+      }
+      60% {
+        background-image: url(/landing2.jpg);
+        background-size: 100% 100%;
+      }
+      66% {
+        background-image: url(/landing3.jpg);
+        background-size: 100% 100%;
+      }
+      94% {
+        background-image: url(/landing3.jpg);
+        background-size: 110% 110%;
+      }
+      100% {
+        background-image: url(/landing1.jpg);
+        background-size: 110% 110%;
+      }
+    }
+    @include keyframe(slideWithoutZoom) {
+      0% {
+        background-image: url(/landing1.jpg);
+      }
+      27% {
+        background-image: url(/landing1.jpg);
+      }
+      33% {
+        background-image: url(/landing2.jpg);
+      }
+      60% {
+        background-image: url(/landing2.jpg);
+      }
+      66% {
+        background-image: url(/landing3.jpg);
+      }
+      94% {
+        background-image: url(/landing3.jpg);
+      }
+      100% {
+        background-image: url(/landing1.jpg);
+      }
+    }
+  }
+  & .box {
+    position: absolute;
+    bottom: 50px;
+    right: 50px;
+    background-color: $main-color;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    width: 110px;
+    height: 110px;
+    color: black;
+    @include mobile {
+      display: none;
+    }
+    &::before {
+      position: absolute;
+      content: "";
+      left: 0;
+      top: 0;
+      width: 110px;
+      height: 110px;
+      border: 1px solid $main-color;
+      background-color: transparent;
+      animation: rotateBox 16s infinite linear;
+      transform: rotate(0deg);
+      @include keyframe(rotateBox) {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+    }
+
+    & .image {
+      margin-top: 10px;
+    }
+    & p {
+      margin-top: 8px;
+    }
+  }
+}

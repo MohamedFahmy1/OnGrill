@@ -1,0 +1,165 @@
+@use "../helpers/" as *;
+
+.menuTypes {
+  background-color: $section-color;
+  padding: $main-padding 0;
+  text-align: center;
+  position: relative;
+
+  & .shape7 {
+    position: absolute;
+    bottom: -170px;
+    right: 0;
+    z-index: 10;
+    @include large-screen {
+      display: none;
+    }
+  }
+
+  & .shape3 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    animation: shift 6s infinite linear;
+    @include average-screen {
+      display: none;
+    }
+  }
+  & .shape4 {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    animation: shift-up 6s infinite linear;
+    @include average-screen {
+      display: none;
+    }
+  }
+  @include keyframe(shift) {
+    0% {
+      top: 0;
+    }
+    50% {
+      top: 40px;
+    }
+    100% {
+      top: 0;
+    }
+  }
+  @include keyframe(shift-up) {
+    0% {
+      bottom: 0;
+    }
+    50% {
+      bottom: 40px;
+    }
+    100% {
+      bottom: 0;
+    }
+  }
+  & .container {
+    & .heading {
+      margin-top: 50px;
+      & h2 {
+        margin: 20px 0;
+      }
+    }
+    & > p {
+      color: white;
+      max-width: 420px;
+      margin: 0 auto;
+      line-height: 1.8;
+    }
+    & .content {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      column-gap: 120px;
+      margin-top: 100px;
+      row-gap: 50px;
+      & .card {
+        color: white;
+        z-index: 2;
+        position: relative;
+        padding-top: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        width: fit-content;
+        margin: 0 auto;
+        & .image {
+          position: relative;
+          z-index: 2;
+          transition: all 0.7s;
+          width: fit-content;
+          &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 50%;
+            height: 100%;
+            background-image: linear-gradient(
+              to right,
+              transparent 0%,
+              rgba(255, 255, 255, 0.4) 100%
+            );
+            transform: skew(-0.08turn) translate(-180%);
+          }
+          &:hover {
+            transform: scale(1.05);
+            &::after {
+              transform: skew(-0.08turn) translate(275%);
+              transition: 1s;
+            }
+          }
+          &::before {
+            position: absolute;
+            content: "";
+            top: -27px;
+            left: 50%;
+            transform: translate(-50%);
+            width: 140px;
+            height: 114%;
+            background-image: url(/menuPattern.svg);
+            background-position: center;
+            background-size: cover;
+            background-repeat: repeat;
+            transition: all 0.7s;
+            z-index: -1;
+            will-change: transform;
+          }
+          &:hover {
+            &.image {
+              &::before {
+                transform: rotateY(0.5turn) translate(50%);
+                transition-delay: 0.3s;
+              }
+            }
+          }
+        }
+        & h3 {
+          margin-top: 50px;
+          font-family: $special-font;
+          font-size: 31px;
+          font-weight: 500;
+          letter-spacing: 1px;
+        }
+        & p {
+          color: $main-color;
+          font-size: 12px;
+          font-weight: 900;
+          cursor: pointer;
+          letter-spacing: 3px;
+          margin-top: 20px;
+        }
+      }
+      & .card:first-child,
+      .card:last-child {
+        @media (min-width: 1201px) {
+          transform: translateY(-180px);
+        }
+      }
+    }
+  }
+}

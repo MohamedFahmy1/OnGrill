@@ -1,0 +1,149 @@
+@use "../helpers/" as *;
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: transparent;
+  padding: 35px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 50;
+  transition: all $main-transition;
+  &.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #212121;
+    border-color: #00000026;
+    padding: 20px;
+  }
+  & .logo {
+    position: relative;
+    &::after {
+      position: absolute;
+      content: "ONGRILL";
+      color: white;
+      top: 10px;
+      right: 3px;
+      font-size: 30px;
+      font-family: $special-font;
+      @include mobile {
+        font-size: 24px;
+      }
+    }
+    & img {
+      width: 170px;
+      height: 60px;
+      position: relative;
+      @include mobile {
+        width: 140px;
+        height: 50px;
+      }
+    }
+  }
+  & .regMenu {
+    display: flex;
+    gap: 30px;
+    @include average-screen {
+      display: none;
+    }
+    & li {
+      & a {
+        position: relative;
+        color: white;
+        padding: 20px 0;
+        font-size: 12px;
+        font-weight: 900;
+        letter-spacing: 1px;
+        @include hoverEffect;
+        &.active {
+          @include hoverEffectActive;
+          color: $main-color;
+        }
+      }
+    }
+  }
+  & .menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    & .btn {
+      padding: 18px 45px;
+      &.bump {
+        animation: bump 300ms ease-out;
+      }
+
+      @keyframes bump {
+        0% {
+          transform: scale(1);
+        }
+        10% {
+          transform: scale(0.9);
+        }
+        30% {
+          transform: scale(1.1);
+        }
+        50% {
+          transform: scale(1.15);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+
+      @include mobile {
+        padding: 10px;
+        height: fit-content;
+        letter-spacing: -1px;
+        font-weight: 600;
+      }
+      & .icon {
+        width: 20px;
+        height: 20px;
+        @include mobile {
+          width: 13px;
+          height: 13px;
+        }
+      }
+      & .totalCart {
+        margin: 0px 8px 0 5px;
+      }
+    }
+    & .nav-open-btn {
+      @include medium-screen {
+        display: none;
+      }
+      padding: 20px;
+      padding-right: 0;
+      background: none;
+      border: none;
+      cursor: pointer;
+      & .line {
+        display: block;
+        width: 30px;
+        height: 2px;
+        background-color: white;
+        margin-block: 4px;
+        transform-origin: left;
+        animation: menuBtn 0.4s ease-in-out alternate infinite;
+        &.line-2 {
+          animation-delay: 0.15s;
+        }
+        &.line-3 {
+          animation-delay: 0.3s;
+        }
+        @include keyframe(menuBtn) {
+          0% {
+            transform: scaleX(1);
+          }
+          100% {
+            transform: scaleX(0.5);
+          }
+        }
+      }
+    }
+  }
+}

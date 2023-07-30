@@ -1,0 +1,120 @@
+@use "../helpers/" as *;
+
+.sideMenu {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: -360px;
+  max-width: 360px;
+  width: 100%;
+  background-color: $section-color;
+  color: white;
+  height: 100vh;
+  padding: 0 30px 50px;
+  z-index: 100;
+  transition: all $main-transition;
+  overflow-y: scroll;
+  &.active {
+    left: 0;
+    & .overlay {
+      display: block;
+    }
+  }
+
+  & .overlay {
+    display: none;
+    @include overlay-black;
+    position: fixed;
+    z-index: -1;
+  }
+  & .close {
+    color: white;
+    border: 1px solid white;
+    background: none;
+    border-radius: 50%;
+    display: block;
+    margin: 30px 0;
+    margin-left: auto;
+    padding: 5px 10px;
+    transition: all $main-transition;
+    cursor: pointer;
+    &:hover {
+      color: $main-color;
+      border-color: $main-color;
+    }
+  }
+  & .logo {
+    margin: 0 auto 50px;
+    width: fit-content;
+    &::after {
+      left: 55px;
+    }
+  }
+  & .sideMenuLinks {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 90px;
+    & a {
+      position: relative;
+      display: block;
+      color: white;
+      padding: 20px 0;
+      width: 100%;
+      font-size: 12px;
+      font-weight: 400;
+      letter-spacing: 1px;
+      border-top: 1px solid #ffffff33;
+      transition: all $main-transition;
+      &::after {
+        position: absolute;
+        content: "";
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%) rotate(45deg);
+        width: 8px;
+        height: 8px;
+        border: 1px solid $main-color;
+        opacity: 0;
+        transition: all $main-transition;
+      }
+      &.active {
+        color: $main-color;
+        padding-left: 20px;
+        &::after {
+          opacity: 1;
+        }
+      }
+      &:hover {
+        color: $main-color;
+      }
+    }
+    & a:last-of-type {
+      border-bottom: 1px solid #ffffff33;
+    }
+  }
+  & .info {
+    text-align: center;
+    & h2 {
+      font-size: 37px;
+      font-family: $special-font;
+      font-weight: 500;
+      margin-bottom: 30px;
+    }
+    & p {
+      color: $secondary-color;
+      margin: 8px 0;
+      line-height: 1.8;
+    }
+  }
+  & h3 {
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  & span {
+    color: $main-color;
+    font-size: 30px;
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+  }
+}

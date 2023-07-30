@@ -1,0 +1,151 @@
+@use "../helpers/" as *;
+
+footer {
+  background-size: cover;
+  padding: $main-padding 0;
+  & .container:first-child {
+    display: grid;
+    grid-template-columns: 0.45fr 1fr 0.45fr;
+    align-items: center;
+    @include average-screen {
+      grid-template-columns: 1fr;
+    }
+    & .links {
+      text-align: center;
+      @include average-screen {
+        order: 2;
+      }
+      & li {
+        margin: 40px 0;
+        & a {
+          color: $secondary-color;
+          font-size: 12px;
+          font-weight: 900;
+          letter-spacing: 3px;
+          text-transform: uppercase;
+          position: relative;
+          padding: 10px 0;
+          transition: all 0.7s;
+          @include hoverEffect;
+        }
+      }
+    }
+    & .content {
+      background-size: cover;
+      position: relative;
+      text-align: center;
+      padding: $main-padding 0;
+      overflow: hidden;
+      @include average-screen {
+        order: 1;
+      }
+      & .right,
+      .left {
+        position: absolute;
+        top: -10px;
+      }
+      & .right {
+        right: 0;
+      }
+      & .left {
+        left: 0;
+      }
+      & .logo {
+        position: relative;
+        width: fit-content;
+        margin: 0 auto;
+        &::after {
+          position: absolute;
+          content: "ONGRILL";
+          color: white;
+          top: 10px;
+          right: 3px;
+          font-size: 30px;
+          font-family: $special-font;
+        }
+        & img {
+          width: 170px;
+          height: 60px;
+          position: relative;
+        }
+      }
+      & .info {
+        color: $secondary-color;
+        & p {
+          margin: 10px auto;
+          width: 90%;
+        }
+      }
+      & .offers {
+        & h3 {
+          font-size: 31px;
+          font-family: $special-font;
+          color: white;
+          font-weight: 500;
+        }
+        & p {
+          color: $secondary-color;
+          margin: 5px 0;
+          font-size: 14px;
+          & span {
+            color: white;
+          }
+        }
+      }
+      & .form {
+        display: flex;
+        margin: 20px auto;
+        justify-content: center;
+        position: relative;
+        width: fit-content;
+        @include mobile {
+          flex-direction: column;
+          width: 80%;
+          gap: 20px;
+        }
+        & .icon {
+          position: absolute;
+          left: 20px;
+          @include abs-y;
+          width: 23px;
+          height: 16px;
+          color: white;
+          @include mobile {
+            position: absolute;
+            top: 22%;
+            transform: translateY(-50%);
+          }
+        }
+        & input {
+          outline: none;
+          background-color: $gray-color;
+          transition: all $main-transition;
+          border: 1px solid gray;
+          color: white;
+          padding: 20px;
+          padding-left: 50px;
+          &:focus {
+            border: 1px solid $main-color;
+          }
+          &::placeholder {
+            color: white;
+          }
+        }
+        & .btn {
+          cursor: pointer;
+          display: block;
+          max-width: 100%;
+          padding: 20px;
+        }
+      }
+    }
+  }
+  & .copyWrite {
+    color: $secondary-color;
+    text-align: center;
+    margin-top: 70px;
+    & a {
+      color: $main-color;
+    }
+  }
+}

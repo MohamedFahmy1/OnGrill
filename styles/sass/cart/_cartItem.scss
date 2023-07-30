@@ -1,0 +1,44 @@
+@use "../helpers/" as *;
+
+.cartItem {
+  display: flex;
+  padding: 10px;
+  border: 1px solid #ffffff33;
+  & .info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 20px;
+    & .title {
+      display: flex;
+      justify-content: space-between;
+      font-size: 20px;
+    }
+    & .amount {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      & .inputBox {
+        display: flex;
+        & .btn {
+          padding: 5px;
+        }
+        & input {
+          text-align: center;
+          background-color: $gray-color;
+          border: 1px solid $main-color;
+          color: white;
+        }
+      }
+      & .removeCart {
+        font-weight: 900;
+        font-size: 20px;
+        color: $main-color;
+        cursor: pointer;
+        background: none;
+        border: none;
+      }
+    }
+  }
+}
