@@ -9,7 +9,7 @@ import shape7 from "/images/shape7.png";
 
 const MenuTypes = () => {
   return (
-    <section className="menuTypes" id="menuTypes">
+    <article className="menuTypes" id="menuTypes">
       <Image src={shape3} alt="decoration of spieces" className="shape3" />
       <Image src={shape4} alt="decoration of spieces" className="shape4" />
       <Image src={shape7} alt="decoration of spieces" className="shape7" />
@@ -49,7 +49,7 @@ const MenuTypes = () => {
           </div>
         </div>
       </div>
-    </section>
+    </article>
   );
 };
 

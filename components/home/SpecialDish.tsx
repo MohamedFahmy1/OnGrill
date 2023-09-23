@@ -7,7 +7,7 @@ import shape1 from "/images/shape1.png";
 import shape2 from "/images/shape2.png";
 const SpecialDish = () => {
   return (
-    <section className="specialDish" id="specialDish">
+    <article className="specialDish" id="specialDish">
       <Image src={specialDish} alt="specialDish" className="image" />
       <div className="content">
         <Image src={shape1} alt="pepper" className="shape1" />
@@ -35,7 +35,7 @@ const SpecialDish = () => {
           </span>
         </Link>
       </div>
-    </section>
+    </article>
   );
 };
 

@@ -71,7 +71,7 @@ const DUMMY_ITEMS: {
 ];
 const DetailedMenu = () => {
   return (
-    <section className="detailedMenu" id="detailedMenu">
+    <article className="detailedMenu" id="detailedMenu">
       <Image src={shape5} alt="shape decoration" className="shape5" />
       <Image src={shape6} alt="shape decoration" className="shape6" />
       <div className="container">
@@ -102,7 +102,7 @@ const DetailedMenu = () => {
           <span className="text text-2">VIEW ALL MENU</span>
         </button>
       </div>
-    </section>
+    </article>
   );
 };
 

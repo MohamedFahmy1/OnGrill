@@ -6,7 +6,7 @@ import seperator from "/images/separator-9ea70961.svg";
 import Link from "next/link";
 const Landing = () => {
   return (
-    <section
+    <article
       className="landing"
       id="landing"
       style={{
@@ -44,7 +44,7 @@ const Landing = () => {
           BOOK A <br /> TABLE
         </p>
       </Link>
-    </section>
+    </article>
   );
 };
 

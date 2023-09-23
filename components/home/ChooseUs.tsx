@@ -9,7 +9,7 @@ import shape9 from "/images/shape9.png";
 
 const ChooseUs = () => {
   return (
-    <section className="chooseUs" id="chooseUs">
+    <article className="chooseUs" id="chooseUs">
       <Image src={shape9} alt="shape9" className="shape9" />
       <div className="container">
         <div className="heading">
@@ -42,7 +42,7 @@ const ChooseUs = () => {
           </div>
         </div>
       </div>
-    </section>
+    </article>
   );
 };
 

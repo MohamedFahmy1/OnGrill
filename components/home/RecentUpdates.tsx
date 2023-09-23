@@ -5,7 +5,7 @@ import event2 from "/images/event2.jpg";
 import event3 from "/images/event3.jpg";
 const RecentUpdates = () => {
   return (
-    <section className="recentUpdates" id="recentUpdates">
+    <article className="recentUpdates" id="recentUpdates">
       <div className="container">
         <div className="heading">
           <p>RECENT UPDATES</p>
@@ -53,7 +53,7 @@ const RecentUpdates = () => {
           </span>
         </button>
       </div>
-    </section>
+    </article>
   );
 };
 

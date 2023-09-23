@@ -6,7 +6,7 @@ import rotatingImage from "/images/rotatingImage.png";
 import shape8 from "/images/shape8.png";
 const About = () => {
   return (
-    <section className="about" id="about">
+    <article className="about" id="about">
       <Image src={shape8} alt="shape8" className="shape8" />
       <div className="container">
         <div className="left">
@@ -45,7 +45,7 @@ const About = () => {
           </div>
         </figure>
       </div>
-    </section>
+    </article>
   );
 };
 

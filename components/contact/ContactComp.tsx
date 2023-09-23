@@ -2,7 +2,7 @@ import Image from "next/image";
 import avatar from "/images/avatar.jpg";
 const ContactComp = () => {
   return (
-    <section className="contact">
+    <article className="contact">
       <div className="testimonials">
         <div className="container">
           <h1>
@@ -78,7 +78,7 @@ const ContactComp = () => {
           </div>
         </div>
       </div>
-    </section>
+    </article>
   );
 };
 
