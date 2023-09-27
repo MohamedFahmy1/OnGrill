@@ -3,7 +3,7 @@ import avatar from "/images/avatar.jpg";
 const ContactComp = () => {
   return (
     <article className="contact">
-      <div className="testimonials">
+      <section className="testimonials">
         <div className="container">
           <h1>
             &quot; I wanted to thank you for inviting me down for that amazing
@@ -19,8 +19,8 @@ const ContactComp = () => {
           </div>
           <p>John Smith</p>
         </div>
-      </div>
-      <div className="contactForm">
+      </section>
+      <section className="contactForm">
         <div className="container">
           <div className="box">
             <div className="left">
@@ -77,7 +77,7 @@ const ContactComp = () => {
             </div>
           </div>
         </div>
-      </div>
+      </section>
     </article>
   );
 };

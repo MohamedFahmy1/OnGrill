@@ -9,14 +9,14 @@ const About = () => {
     <article className="about" id="about">
       <Image src={shape8} alt="shape8" className="shape8" />
       <div className="container">
-        <div className="left">
-          <div className="heading">
+        <section className="left">
+          <section className="heading">
             <p>OUR STORY</p>
             <span>
               <Image src={seperator} alt="seperator" />
             </span>
             <h2>Every Flavor Tells a Story</h2>
-          </div>
+          </section>
           <p>
             Lorem Ipsum is simply dummy text of the printingand typesetting
             industry lorem Ipsum has been the industrys standard dummy text ever
@@ -30,7 +30,7 @@ const About = () => {
             <span className="text text-1">READ MORE</span>
             <span className="text text-2">READ MORE</span>
           </button>
-        </div>
+        </section>
         <figure className="right">
           <Image src={about1} alt="about1" className="about1" />
           <div className="sideImage">

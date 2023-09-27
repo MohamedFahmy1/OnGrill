@@ -58,7 +58,7 @@ const CartItem: React.FC<{
       break;
   }
   return (
-    <div className="cartItem">
+    <section className="cartItem">
       <Image src={image!} alt="food" width={50} height={50}></Image>
       <div className="info">
         <div className="title">
@@ -97,7 +97,7 @@ const CartItem: React.FC<{
           </button>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

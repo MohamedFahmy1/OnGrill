@@ -14,12 +14,12 @@ const Landing = () => {
       }}
     >
       <div className="container">
-        <div className="heading">
+        <section className="heading">
           <p>AMAZING & DELICIOUS</p>
           <span>
             <Image src={seperator} alt="seprator" />
           </span>
-        </div>
+        </section>
         <h1>
           For the love of
           <br /> delicious food

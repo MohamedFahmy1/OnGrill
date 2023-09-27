@@ -44,7 +44,7 @@ const MenuItem: React.FC<{
     setAmount(value);
   };
   return (
-    <div className="box">
+    <section className="box">
       <div className="image">
         <Image src={imageSrc} alt="menu item" width={100} height={100} />
       </div>
@@ -97,7 +97,7 @@ const MenuItem: React.FC<{
           </button>
         </form>
       </div>
-    </div>
+    </section>
   );
 };
 

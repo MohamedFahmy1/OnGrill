@@ -12,14 +12,14 @@ const ChooseUs = () => {
     <article className="chooseUs" id="chooseUs">
       <Image src={shape9} alt="shape9" className="shape9" />
       <div className="container">
-        <div className="heading">
+        <section className="heading">
           <p>WHY CHOOSE US</p>
           <span>
             <Image src={seperator} alt="seprator" />
           </span>
           <h2>Our Strength</h2>
-        </div>
-        <div className="content">
+        </section>
+        <section className="content">
           <div className="box">
             <Image src={choose1} alt="choose" className="image" />
             <h3>Hygienic Food</h3>
@@ -40,7 +40,7 @@ const ChooseUs = () => {
             <h3>Event & Party</h3>
             <p>Lorem Ipsum is simply dummy printing and typesetting.</p>
           </div>
-        </div>
+        </section>
       </div>
     </article>
   );

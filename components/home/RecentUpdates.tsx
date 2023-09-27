@@ -7,14 +7,14 @@ const RecentUpdates = () => {
   return (
     <article className="recentUpdates" id="recentUpdates">
       <div className="container">
-        <div className="heading">
+        <section className="heading">
           <p>RECENT UPDATES</p>
           <span>
             <Image src={seperator} alt="seperator" />
           </span>
           <h2>Upcoming Events</h2>
-        </div>
-        <div className="content">
+        </section>
+        <section className="content">
           <div
             className="box"
             style={{ backgroundImage: `url(${event1.src})` }}
@@ -45,7 +45,7 @@ const RecentUpdates = () => {
               <p>Flavour so good you`ll try to eat with your eyes.</p>
             </div>
           </div>
-        </div>
+        </section>
         <button className="btn btn-primary">
           <span className="text text-1">VIEW OUR BLOG</span>
           <span className="text text-2" aria-hidden="true">

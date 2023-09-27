@@ -9,7 +9,7 @@ const SpecialDish = () => {
   return (
     <article className="specialDish" id="specialDish">
       <Image src={specialDish} alt="specialDish" className="image" />
-      <div className="content">
+      <section className="content">
         <Image src={shape1} alt="pepper" className="shape1" />
         <Image src={shape2} alt="pepper" className="shape2" />
         <div className="heading">
@@ -34,7 +34,7 @@ const SpecialDish = () => {
             View All Menu
           </span>
         </Link>
-      </div>
+      </section>
     </article>
   );
 };

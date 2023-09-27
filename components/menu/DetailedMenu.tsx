@@ -75,14 +75,14 @@ const DetailedMenu = () => {
       <Image src={shape5} alt="shape decoration" className="shape5" />
       <Image src={shape6} alt="shape decoration" className="shape6" />
       <div className="container">
-        <div className="heading">
+        <section className="heading">
           <p>SPECIAL SELECTION</p>
           <span>
             <Image src={seperator} alt="seperator" />
           </span>
           <h2>Delicious Menu</h2>
-        </div>
-        <div className="content">
+        </section>
+        <section className="content">
           {DUMMY_ITEMS.map((item) => (
             <MenuItem
               key={item.id}
@@ -93,7 +93,7 @@ const DetailedMenu = () => {
               label={item.label!}
             />
           ))}
-        </div>
+        </section>
         <p>
           During winter daily from <span> 7:00 pm</span> to <span>9:00 pm</span>
         </p>

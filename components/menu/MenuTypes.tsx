@@ -14,18 +14,18 @@ const MenuTypes = () => {
       <Image src={shape4} alt="decoration of spieces" className="shape4" />
       <Image src={shape7} alt="decoration of spieces" className="shape7" />
       <div className="container">
-        <div className="heading">
+        <section className="heading">
           <p>FLAVORS FOR ROYALTY</p>
           <span>
             <Image src={seperator} alt="seperator" />
           </span>
           <h2>We Offer Top Notch</h2>
-        </div>
+        </section>
         <p>
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry lorem Ipsum has been the industrys standard dummy text ever.
         </p>
-        <div className="content">
+        <section className="content">
           <div className="card">
             <div className="image">
               <Image src={menuType1} alt="menuType" />
@@ -47,7 +47,7 @@ const MenuTypes = () => {
             <h3>Drinks</h3>
             <p>VIEW MENU</p>
           </div>
-        </div>
+        </section>
       </div>
     </article>
   );
